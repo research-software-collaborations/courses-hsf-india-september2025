@@ -1,0 +1,8 @@
+#!/bin/sh
+
+git clone --recurse-submodules https://github.com/research-software-collaborations/courses-hsf-india-september2025
+
+rm -rf courses-hsf-india-september2025/binder
+
+export G4NEUTRONHPDATA=/srv/conda/envs/notebook/share/Geant4/data
+exec "$@"
