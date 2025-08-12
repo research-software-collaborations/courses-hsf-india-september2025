@@ -1,0 +1,32 @@
+name: hsf-india-simulation
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - cxx-compiler
+  - zstandard
+  - zstd
+  - clang-tools
+  - fsspec
+  - lz4
+  - python-xxhash
+  - pyarrow
+  - cmake #needed to compile Geant examples
+  - openssh #otherwise ssh is broken due to bug with openssl it seems
+  - vim
+  - emacs
+  - geant4
+  - eigen
+  - doxygen
+  - boost
+  - xerces-c
+  - sqlite
+  - hdf5
+  - nlohmann_json
+  - coin3d
+  - soqt
+  - pythia8
+  - hepmc3
+  - geant4-data-ndl
