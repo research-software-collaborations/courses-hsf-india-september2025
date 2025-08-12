@@ -10,5 +10,5 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install -DGEOMODEL_BU
 make -j 2
 make install
 
-rm -rf buidl_geomodel
+rm -rf build_geomodel
 rm -rf GeoModel
