@@ -1,52 +1,42 @@
-name: hsf-india-python
+name: hsf-india-ml
+name: codas-hep
 channels:
+#  - nvidia/label/cuda-12.9
   - conda-forge
-  - defaults
+  - defaults  
 dependencies:
-  - python=3.12
+  - python=3.11
   - pip
-  - cxx-compiler
   - zstandard
   - zstd
   - clang-tools
   - fsspec
   - lz4
-  - python-xxhash
-  - pyarrow
-  - cmake #needed to compile Geant examples
   - openssh #otherwise ssh is broken due to bug with openssl it seems
-  - vim
   - pip:
-      - astunparse
-      - awkward
-      - dm-haiku
       - h5py
-      - hepunits
-      - hist
-      - ipympl
-      - jax
       - jupyterlab-deck
       - jupyterlab-mathjax3
-      - matplotlib
-      - numba
-      - numexpr
-      - numpy
-      - pandas
-      - particle
-      - protobuf
-      - pyarrow
-      - pybind11
-      - pyhf
-      - pyshp
-      - scikit-learn
-      - tables
-      - uproot
-      - vector
+      - kaggle
+      - keras
+      - jax
       - mplhep
-      - requests
-      - aiohttp
-      - servicex
-      - bash_kernel
-     
+      - networkx
+      - numpy<2
+      - nvidia-cudnn-cu12
+      - pandas
+      - scipy
+      - scikit-learn
+      - seaborn
+      - tensorboard
+      - tensorflow[and-cuda] 
+      #- tensorrt
+      - torch
+      - torch-geometric
+      - torchvision
+      - tqdm
+      - xgboost
+
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
+  XLA_FLAGS: "'--xla_gpu_cuda_data_dir=$CONDA_PREFIX/'"
