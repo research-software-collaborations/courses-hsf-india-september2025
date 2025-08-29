@@ -24,6 +24,7 @@ dependencies:
       - hepunits
       - hist
       - ipympl
+      - jax
       - jupyterlab-deck
       - jupyterlab-mathjax3
       - matplotlib
