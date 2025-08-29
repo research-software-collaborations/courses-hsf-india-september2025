@@ -1,9 +1,9 @@
-name: hsf-india-simulation
+name: hsf-india-python
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python
+  - python=3.12
   - pip
   - cxx-compiler
   - zstandard
@@ -16,17 +16,36 @@ dependencies:
   - cmake #needed to compile Geant examples
   - openssh #otherwise ssh is broken due to bug with openssl it seems
   - vim
-  - emacs
-  - geant4
-  - eigen
-  - doxygen
-  - boost
-  - xerces-c
-  - sqlite
-  - hdf5
-  - nlohmann_json
-  - coin3d
-  - soqt
-  - pythia8
-  - hepmc3
-  - geant4-data-ndl
+  - pip:
+      - astunparse
+      - awkward
+      - dm-haiku
+      - h5py
+      - hepunits
+      - hist
+      - ipympl
+      - jupyterlab-deck
+      - jupyterlab-mathjax3
+      - matplotlib
+      - numba
+      - numexpr
+      - numpy
+      - pandas
+      - particle
+      - protobuf
+      - pyarrow
+      - pybind11
+      - pyhf
+      - pyshp
+      - scikit-learn
+      - tables
+      - uproot
+      - vector
+      - mplhep
+      - requests
+      - aiohttp
+      - servicex
+      - bash_kernel
+     
+variables:
+  LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
