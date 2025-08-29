@@ -1,5 +1,4 @@
 name: hsf-india-ml
-name: codas-hep
 channels:
 #  - nvidia/label/cuda-12.9
   - conda-forge
