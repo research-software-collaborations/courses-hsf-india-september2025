@@ -1,14 +1,4 @@
 #!/bin/bash
 set -e
 
-git clone --recursive https://gitlab.cern.ch/GeoModelDev/GeoModel.git
-mkdir build_geomodel
-cd build_geomodel
-
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../install -DGEOMODEL_BUILD_TOOLS=1 -DGEOMODEL_BUILD_VISUALIZATION=0 -DCMAKE_PREFIX_PATH=/srv/conda/envs/notebook -DGEOMODEL_BUILD_FULLSIMLIGHT=1 -DGEOMODEL_BUILD_ATLASEXTENSIONS=ON ../GeoModel
-
-make -j 2
-make install
-
-rm -rf buidl_geomodel
-rm -rf GeoModel
+pip cache purge
