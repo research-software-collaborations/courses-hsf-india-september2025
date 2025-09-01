@@ -30,3 +30,4 @@ dependencies:
   - pythia8
   - hepmc3
   - geant4-data-ndl
+  - open3d
