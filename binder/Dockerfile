@@ -5,8 +5,9 @@ RUN apt-get install -y git pip
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache notebook jupyterlab \
-    pip install --no-cache numba awkward uproot cupy matplotlib hdf5 hist
+    pip install --no-cache notebook jupyterlab
+
+RUN pip install --no-cache numba awkward uproot matplotlib hdf5 hist
 
 # create user with a home directory
 ARG NB_USER
