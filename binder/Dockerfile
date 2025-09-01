@@ -7,7 +7,8 @@ RUN apt-get install -y git pip
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook jupyterlab
 
-RUN pip install --no-cache numba awkward uproot matplotlib hdf5 hist
+RUN pip install --no-cache numba awkward uproot matplotlib h5py hist
+RUN pip install --no-cache cupy-cuda12x
 
 # create user with a home directory
 ARG NB_USER
