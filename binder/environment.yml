@@ -30,5 +30,6 @@ dependencies:
   - pythia8
   - hepmc3
   - geant4-data-ndl
-  - open3d
-  - dash
+#seems that open3d from pip does not support jupyter even if the docs say it does
+#  - open3d
+#  - dash
