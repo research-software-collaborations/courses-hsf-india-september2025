@@ -21,7 +21,7 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 
-RUN cd $HOME; git clone --recurse-submodules https://github.com/iris-hep/codas-hep-2025
-RUN rm -rf $HOME/codas-hep-2025/binder    
+RUN cd $HOME; git clone --recurse-submodules https://github.com/research-software-collaborations/courses-hsf-india-september2025
+RUN rm -rf $HOME/courses-hsf-india-september2025/binder    
 WORKDIR ${HOME}
 USER ${USER}
