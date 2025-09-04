@@ -16,12 +16,14 @@ dependencies:
   - cmake #needed to compile Geant examples
   - openssh #otherwise ssh is broken due to bug with openssl it seems
   - vim
+  - polars
   - pip:
       - astunparse
       - awkward
       - dm-haiku
       - h5py
       - hepunits
+      - pint
       - hist
       - ipympl
       - jax
