@@ -1,7 +1,14 @@
 FROM nvcr.io/nvidia/nvhpc:25.5-devel-cuda12.9-ubuntu22.04
 
 RUN apt-get update -y
-RUN apt-get install -y git pip
+RUN apt-get install -y git pip wget
+
+RUN wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+RUN dpkg -i cvmfs-release-latest_all.deb
+RUN rm -f cvmfs-release-latest_all.deb
+RUN apt-get update
+RUN apt-get install cvmfs cvmfs-config-default
+RUN mkdir -p /cvmfs/sft.cern.ch
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
