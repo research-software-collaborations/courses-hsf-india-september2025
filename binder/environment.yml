@@ -4,40 +4,40 @@ channels:
   - defaults
 dependencies:
   - python=3.12
-  - aiohttp
-  - astunparse
-  - awkward
-  - bash_kernel
-  - clang-tools
-  - cxx-compiler
-  - dm-haiku
-  - hepunits
-  - hist
-  - ipympl
-  - jupyterlab-deck
-  - jupyterlab-mathjax3
-  - lz4
-  - matplotlib
-  - numba
-  - openssh
-  - pandas
-  - particle
-  - pint
-  - pip
-  - polars
-  - pyarrow
-  - pybind11
-  - pyhf
-  - pyshp
-  - requests
-  - scikit-learn
-  - servicex
-  - tables
-  - uproot
-  - vector
-  - vim
+  - aiohttp=3.12.15
+  - astunparse=1.6.3
+  - awkward=2.8.7
+  - bash_kernel=0.10.0
+  - clang-tools=18.1.7
+  - cxx-compiler=1.10.0
+  - dm-haiku=0.0.14
+  - hepunits=2.3.6
+  - hist=2.9.0
+  - ipympl=0.9.7
+  - jupyterlab-deck=0.2.0
+  - jupyterlab-mathjax3=4.3.0
+  - lz4=4.3.3
+  - matplotlib=3.10.1
+  - numba=0.59.1
+  - openssh=9.6p1
+  - pandas=2.3.2
+  - particle=0.25.4
+  - pint=0.25
+  - pip=25.2
+  - polars=1.33.0
+  - pyarrow=16.1.0
+  - pybind11=2.13.6
+  - pyhf=0.7.6
+  - pyshp=3.0.1
+  - requests=2.32.5
+  - scikit-learn=1.7.1
+  - servicex=3.2.2
+  - tables=3.9.2
+  - uproot=5.6.4
+  - vector=1.6.3
+  - vim=9.1.1627
   - pip:
-      - h5py
+      - h5py=3.14.0
 
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
