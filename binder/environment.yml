@@ -29,6 +29,7 @@ dependencies:
   - pybind11
   - pyhf
   - pyshp
+  - py-spy
   - requests
   - scikit-learn
   - servicex
