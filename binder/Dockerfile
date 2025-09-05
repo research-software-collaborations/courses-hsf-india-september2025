@@ -12,13 +12,14 @@ RUN mkdir -p /cvmfs/sft.cern.ch
 
 RUN echo "CVMFS_REPOSITORIES=sft.cern.ch" > /etc/cvmfs/default.local
 RUN echo "CVMFS_QUOTA_LIMIT=100" >> /etc/cvmfs/default.local
-RUN mount -t cvmfs sft.cern.ch /cvmfs/sft.cern.ch
 
 RUN service autofs start
 RUN cvmfs_config killall
 RUN cvmfs_config setup
 RUN cvmfs_config chksetup
 RUN service autofs stop
+
+RUN mount -t cvmfs sft.cern.ch /cvmfs/sft.cern.ch
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
