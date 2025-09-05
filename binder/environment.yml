@@ -17,6 +17,7 @@ dependencies:
   - openssh #otherwise ssh is broken due to bug with openssl it seems
   - vim
   - polars
+  - py-spy
   - pip:
       - astunparse
       - awkward
