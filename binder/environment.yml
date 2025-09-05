@@ -3,50 +3,38 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.12
-  - pip
-  - cxx-compiler
-  - zstandard
-  - zstd
-  - clang-tools
-  - fsspec
-  - lz4
-  - python-xxhash
-  - pyarrow
-  - cmake #needed to compile Geant examples
-  - openssh #otherwise ssh is broken due to bug with openssl it seems
-  - vim
-  - polars
+  - aiohttp
   - astunparse
   - awkward
+  - bash_kernel
+  - clang-tools
+  - cxx-compiler
   - dm-haiku
   - hepunits
-  - pint
   - hist
   - ipympl
-  - jax
   - jupyterlab-deck
   - jupyterlab-mathjax3
+  - lz4
   - matplotlib
   - numba
-  - numexpr
-  - numpy
+  - openssh
   - pandas
   - particle
-  - protobuf
+  - pint
+  - pip
+  - polars
   - pyarrow
   - pybind11
   - pyhf
   - pyshp
+  - requests
   - scikit-learn
+  - servicex
   - tables
   - uproot
   - vector
-  - mplhep
-  - requests
-  - aiohttp
-  - servicex
-  - bash_kernel
+  - vim
   - pip:
       - h5py
 
