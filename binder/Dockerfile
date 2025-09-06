@@ -3,23 +3,24 @@ FROM nvcr.io/nvidia/nvhpc:25.5-devel-cuda12.9-ubuntu22.04
 RUN apt-get update -y
 RUN apt-get install -y git pip wget
 
-RUN wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
-RUN dpkg -i cvmfs-release-latest_all.deb
-RUN rm -f cvmfs-release-latest_all.deb
-RUN apt-get update -y
-RUN apt-get install -y cvmfs cvmfs-config-default
-RUN mkdir -p /cvmfs/sft.cern.ch
-
-RUN echo "CVMFS_REPOSITORIES=sft.cern.ch" > /etc/cvmfs/default.local
-RUN echo "CVMFS_QUOTA_LIMIT=100" >> /etc/cvmfs/default.local
+#a start to getting cvmfs to work - but it doesn't
+#RUN wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+#RUN dpkg -i cvmfs-release-latest_all.deb
+#RUN rm -f cvmfs-release-latest_all.deb
+#RUN apt-get update -y
+#RUN apt-get install -y cvmfs cvmfs-config-default
+#RUN mkdir -p /cvmfs/sft.cern.ch
+#
+#RUN echo "CVMFS_REPOSITORIES=sft.cern.ch" > /etc/cvmfs/default.local
+#RUN echo "CVMFS_QUOTA_LIMIT=100" >> /etc/cvmfs/default.local
 
 #RUN service autofs start
-RUN cvmfs_config killall
-RUN cvmfs_config setup
-RUN cvmfs_config chksetup
-RUN service autofs stop
+#RUN cvmfs_config killall
+#RUN cvmfs_config setup
+#RUN cvmfs_config chksetup
+#RUN service autofs stop
 
-RUN mount -t cvmfs sft.cern.ch /cvmfs/sft.cern.ch
+#RUN mount -t cvmfs sft.cern.ch /cvmfs/sft.cern.ch
 
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
