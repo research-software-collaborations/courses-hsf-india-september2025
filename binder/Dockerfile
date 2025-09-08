@@ -60,5 +60,5 @@ USER ${USER}
 ADD     entrypoints/entrypoint-cvmfs.sh /opt/cms/entrypoint.sh
 #RUN     chmod 755 /opt/cms/entrypoint.sh 
 
-ENTRYPOINT ["/opt/cms/entrypoint.sh"]
+#ENTRYPOINT ["/opt/cms/entrypoint.sh"]
 
