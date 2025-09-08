@@ -58,9 +58,7 @@ WORKDIR ${HOME}
 USER ${USER}
 
 ADD     entrypoints/entrypoint-cvmfs.sh /opt/cms/entrypoint.sh
-RUN     sudo chmod 755 /opt/cms/entrypoint.sh && \
-        sudo chown -R cmsusr /home/cmsusr && \
-        chmod 755 /home/cmsusr
+RUN     sudo chmod 755 /opt/cms/entrypoint.sh && 
 
 ENTRYPOINT ["/opt/cms/entrypoint.sh"]
 
