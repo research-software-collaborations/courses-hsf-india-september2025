@@ -4,49 +4,41 @@ channels:
   - defaults
 dependencies:
   - python=3.12
-  - pip
-  - cxx-compiler
-  - zstandard
-  - zstd
+  - aiohttp
+  - astunparse
+  - awkward
+  - bash_kernel
   - clang-tools
-  - fsspec
+  - cxx-compiler
+  - dm-haiku
+  - hepunits
+  - hist
+  - ipympl
+  - jupyterlab-deck
+  - jupyterlab-mathjax3
   - lz4
-  - python-xxhash
+  - matplotlib
+  - numba
+  - openssh
+  - pandas
+  - particle
+  - pint
+  - pip
+  - polars
   - pyarrow
-  - cmake #needed to compile Geant examples
-  - openssh #otherwise ssh is broken due to bug with openssl it seems
+  - pybind11
+  - pyhf
+  - pyshp
+  - py-spy
+  - requests
+  - scikit-learn
+  - servicex
+  - tables
+  - uproot
+  - vector
   - vim
   - pip:
-      - astunparse
-      - awkward
-      - dm-haiku
       - h5py
-      - hepunits
-      - hist
-      - ipympl
-      - jax
-      - jupyterlab-deck
-      - jupyterlab-mathjax3
-      - matplotlib
-      - numba
-      - numexpr
-      - numpy
-      - pandas
-      - particle
-      - protobuf
-      - pyarrow
-      - pybind11
-      - pyhf
-      - pyshp
-      - scikit-learn
-      - tables
-      - uproot
-      - vector
-      - mplhep
-      - requests
-      - aiohttp
-      - servicex
-      - bash_kernel
-     
+
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
