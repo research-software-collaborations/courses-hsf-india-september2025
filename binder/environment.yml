@@ -14,7 +14,6 @@ dependencies:
   - jax
   - optax
   - equinox
-  - flax
   - hepunits
   - hist
   - ipympl
@@ -47,6 +46,7 @@ dependencies:
   - python-graphviz
   - pip:
       - h5py
+      - flax
 
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
