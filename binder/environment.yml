@@ -10,7 +10,10 @@ dependencies:
   - bash_kernel
   - clang-tools
   - cxx-compiler
-  - dm-haiku
+  - pympler
+  - jax
+  - optax
+  - equinox
   - hepunits
   - hist
   - ipympl
@@ -33,12 +36,17 @@ dependencies:
   - requests
   - scikit-learn
   - servicex
-  - tables
   - uproot
   - vector
   - vim
+  - dask
+  - distributed
+  - dask-awkward
+  - graphviz
+  - python-graphviz
   - pip:
       - h5py
+      - flax
 
 variables:
   LD_LIBRARY_PATH: "'$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/'"
