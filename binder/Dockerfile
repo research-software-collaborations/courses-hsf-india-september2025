@@ -54,6 +54,16 @@ RUN adduser --disabled-password \
     --uid ${NB_UID} \
     ${NB_USER}
 
+#try cvmfsexec
+WORKDIR /opt
+RUN git clone https://github.com/cvmfs/cvmfsexec.git
+WORKDIR /opt/cvmfsexec
+RUN ./makedist osg
+
+WORKDIR /home
+
+CMD ["/opt/cvmfsexec/cvmfsexec", "cms.cern.ch", "--", "bash"]
+
 RUN cd $HOME; git clone --recurse-submodules https://github.com/research-software-collaborations/courses-hsf-india-september2025
 RUN rm -rf $HOME/courses-hsf-india-september2025/binder    
 WORKDIR ${HOME}
