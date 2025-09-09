@@ -4,20 +4,22 @@ RUN apt-get update -y
 RUN apt-get install -y git pip wget
 
 #a start to getting cvmfs to work - but it doesn't
-RUN wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
-RUN dpkg -i cvmfs-release-latest_all.deb
-RUN rm -f cvmfs-release-latest_all.deb
+#previous attempts commented out for the moment...
+#RUN wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+#RUN dpkg -i cvmfs-release-latest_all.deb
+#RUN rm -f cvmfs-release-latest_all.deb
 RUN apt-get update -y
-RUN apt-get install -y cvmfs cvmfs-config-default fuse
+#RUN apt-get install -y cvmfs cvmfs-config-default fuse
+RUN apt-get install -y curl rpm2cpio cpio
 
-RUN mkdir -p /cvmfs/cms.cern.ch && \
-    echo "cms.cern.ch /cvmfs/cms.cern.ch cvmfs defaults 0 0" >> /etc/fstab && \
-    mkdir -p /cvmfs/cms-opendata-conddb.cern.ch && \
-    echo "cms-opendata-conddb.cern.ch /cvmfs/cms-opendata-conddb.cern.ch cvmfs defaults 0 0" >> /etc/fstab
-ADD cvmfs/cms.cern.ch.local /etc/cvmfs/config.d/cms.cern.ch.local
-ADD cvmfs/run-cvmfs.sh /etc/cvmfs/run-cvmfs.sh
-RUN chmod uga+rx /etc/cvmfs/run-cvmfs.sh
-ADD cvmfs/default.local /etc/cvmfs/default.local
+#RUN mkdir -p /cvmfs/cms.cern.ch && \
+#    echo "cms.cern.ch /cvmfs/cms.cern.ch cvmfs defaults 0 0" >> /etc/fstab && \
+#    mkdir -p /cvmfs/cms-opendata-conddb.cern.ch && \
+#    echo "cms-opendata-conddb.cern.ch /cvmfs/cms-opendata-conddb.cern.ch cvmfs defaults 0 0" >> /etc/fstab
+#ADD cvmfs/cms.cern.ch.local /etc/cvmfs/config.d/cms.cern.ch.local
+#ADD cvmfs/run-cvmfs.sh /etc/cvmfs/run-cvmfs.sh
+#RUN chmod uga+rx /etc/cvmfs/run-cvmfs.sh
+#ADD cvmfs/default.local /etc/cvmfs/default.local
 
 
 
