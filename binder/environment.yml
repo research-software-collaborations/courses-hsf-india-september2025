@@ -10,7 +10,11 @@ dependencies:
   - bash_kernel
   - clang-tools
   - cxx-compiler
-  - dm-haiku
+  - pympler
+  - jax
+  - optax
+  - equinox
+  - flax
   - hepunits
   - hist
   - ipympl
@@ -37,6 +41,11 @@ dependencies:
   - uproot
   - vector
   - vim
+  - dask
+  - distributed
+  - dask-awkward
+  - graphviz
+  - python-graphviz
   - pip:
       - h5py
 
