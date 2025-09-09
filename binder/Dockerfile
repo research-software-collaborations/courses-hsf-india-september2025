@@ -60,16 +60,16 @@ RUN git clone https://github.com/cvmfs/cvmfsexec.git
 WORKDIR /opt/cvmfsexec
 RUN ./makedist osg
 
-WORKDIR /home
 
-CMD ["/opt/cvmfsexec/cvmfsexec", "cms.cern.ch", "--", "bash"]
 
 RUN cd $HOME; git clone --recurse-submodules https://github.com/research-software-collaborations/courses-hsf-india-september2025
 RUN rm -rf $HOME/courses-hsf-india-september2025/binder    
 WORKDIR ${HOME}
 USER ${USER}
 
-ADD     entrypoints/entrypoint-cvmfs.sh /opt/cms/entrypoint.sh
+WORKDIR ${HOME}
+CMD ["/opt/cvmfsexec/cvmfsexec", "cms.cern.ch", "--", "bash"]
+#ADD     entrypoints/entrypoint-cvmfs.sh /opt/cms/entrypoint.sh
 #RUN     chmod 755 /opt/cms/entrypoint.sh 
 
 #ENTRYPOINT ["/opt/cms/entrypoint.sh"]
