@@ -2,3 +2,4 @@
 set -e
 
 pip cache purge
+conda clean --all 
