@@ -1,3 +1,6 @@
 [submodule "ScientificPython"]
 	path = ScientificPython
 	url = https://github.com/nsmith-/2025-09-15-hsf-india-tutorial-chandigarh.git
+[submodule "hsf-india-ml-tutorial-2025-09"]
+	path = MachineLearning
+	url = https://github.com/gordonwatts/hsf-india-ml-tutorial-2025-09.git
