@@ -4,3 +4,6 @@
 [submodule "hsf-india-ml-tutorial-2025-09"]
 	path = MachineLearning
 	url = https://github.com/gordonwatts/hsf-india-ml-tutorial-2025-09.git
+[submodule "AdvancedML"]
+	path = AdvancedML
+	url = git@github.com:livaage/hsf-india-chandigarh-ml.git
