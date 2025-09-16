@@ -1,9 +1,9 @@
 [submodule "ScientificPython"]
 	path = ScientificPython
-	url = https://github.com/nsmith-/2025-09-15-hsf-india-tutorial-chandigarh.git
+	url = ../../nsmith-/2025-09-15-hsf-india-tutorial-chandigarh.git
 [submodule "hsf-india-ml-tutorial-2025-09"]
 	path = MachineLearning
-	url = https://github.com/gordonwatts/hsf-india-ml-tutorial-2025-09.git
+	url = ../../gordonwatts/hsf-india-ml-tutorial-2025-09.git
 [submodule "AdvancedML"]
 	path = AdvancedML
-	url = https://github.com/livaage/hsf-india-chandigarh-ml.git
+	url = ../../livaage/hsf-india-chandigarh-ml.git
