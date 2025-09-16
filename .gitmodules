@@ -6,4 +6,4 @@
 	url = https://github.com/gordonwatts/hsf-india-ml-tutorial-2025-09.git
 [submodule "AdvancedML"]
 	path = AdvancedML
-	url = git@github.com:livaage/hsf-india-chandigarh-ml.git
+	url = https://github.com/livaage/hsf-india-chandigarh-ml.git
