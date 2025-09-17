@@ -9,4 +9,4 @@
 	url = ../../livaage/hsf-india-chandigarh-ml.git
 [submodule "GPU"]
 	path = GPU
-	url = https://github.com/brij01/GPU-HSF-India-UPunjab-2025.git
+	url = ../../brij01/GPU-HSF-India-UPunjab-2025.git
